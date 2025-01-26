@@ -28,4 +28,5 @@ dog and person respectively and a Main application class for interacting and dem
 3. Run the main application class
 
 ## Running Unit Tests
--
+There are two unit tests in this project one for Person and one for Dog class.
+You can go to the test files for each one namely: `DogTest` and `PersonTest` and hit the Run icon in intellij or your IDE.
