@@ -20,6 +20,9 @@ public class Dog {
         this.age = age;
     }
 
+    // TODO: Add equals method
+
+
     public Dog(String name, int age) {
         this.name = name;
         this.age = age;

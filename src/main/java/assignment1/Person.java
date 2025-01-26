@@ -37,9 +37,21 @@ public class Person {
         this(name, age, null);
     }
 
+    // TODO: Add equals method
+
     public Person(String name, int age, Dog dog) {
         this.name = name;
         this.age = age;
         this.dog = Optional.of(dog);
     }
+
+    public boolean hasOldDog() {
+        return dog.map(d -> d.getAge() >= 10).orElse(false);
+    }
+
+    public void changeDogsName(String newName) {
+        dog.orElseThrow(() -> new RuntimeException(this.name + " does not own a dog!"))
+                .setName(newName);
+    }
+
 }
