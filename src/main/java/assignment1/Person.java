@@ -46,7 +46,7 @@ public class Person {
     }
 
     public boolean hasOldDog() {
-        return dog.map(d -> d.getAge() >= 10).orElse(false);
+        return dog.isPresent() && dog.get().getAge() >= 10;
     }
 
     public void changeDogsName(String newName) {
