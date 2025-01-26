@@ -1,6 +1,7 @@
 package assignment1;
 
 public class Dog {
+    // TODO: Make these private
     String name;
     int age;
 
