@@ -42,7 +42,7 @@ public class Person {
     public Person(String name, int age, Dog dog) {
         this.name = name;
         this.age = age;
-        this.dog = Optional.of(dog);
+        this.dog = Optional.ofNullable(dog);
     }
 
     public boolean hasOldDog() {
