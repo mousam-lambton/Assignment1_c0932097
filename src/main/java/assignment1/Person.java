@@ -1,5 +1,6 @@
 package assignment1;
 
+import java.util.Objects;
 import java.util.Optional;
 
 public class Person {
@@ -37,7 +38,20 @@ public class Person {
         this(name, age, null);
     }
 
-    // TODO: Add equals method
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age &&
+                name.equals(person.name) &&
+                Objects.equals(dog, person.dog);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, dog);
+    }
 
     public Person(String name, int age, Dog dog) {
         this.name = name;
